@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const apiController = require('../../controllers/apiController.js');
+const apiController = require('../controllers/apiController.js');
 
 router.route('/api/people')
     .get(apiController.getPeopleData);
