@@ -7,11 +7,10 @@ class Header extends Component {
         return (
             <Container>
                 <Jumbotron>
-                    <h1>Hello, world!</h1>
-                    <p>
-                        This is a simple hero unit, a simple jumbotron-style component for calling
-                        extra attention to featured content or information.
-  </p>
+                    <h1>SalesLoft People Data</h1>
+                    <p>Using SalesLoft's API, we have provided data about all the people on your team.<br/>
+                        For detailed email address character stats, click a person's row.
+                    </p>
                 </Jumbotron>
             </Container>
         );
