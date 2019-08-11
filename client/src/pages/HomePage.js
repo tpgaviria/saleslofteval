@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import DataContainer from '../components/DataContainer/DataContainer';
+import Header from '../components/Header/Header';
+
 
 class HomePage extends Component {
     state = {
@@ -9,7 +11,7 @@ class HomePage extends Component {
     render() {
         return (
             <div>
-                <h1>Hi, main page</h1>
+                <Header />
                 <DataContainer />
             </div>
         );

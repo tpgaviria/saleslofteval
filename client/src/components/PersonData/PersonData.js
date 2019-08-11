@@ -11,9 +11,9 @@ function PersonData(props) {
                 <Accordion.Toggle as={Card.Header} eventKey={props.eventKey}>
              
                     <Row>
-                        <Col>{props.firstname} {props.lastname}</Col>
-                        <Col>{props.title}</Col>
-                        <Col>{props.email}</Col>
+                        <Col xs={4}>{props.firstname} {props.lastname}</Col>
+                        <Col xs={4}>{props.title}</Col>
+                        <Col xs={4}>{props.email}</Col>
                     </Row>
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey={props.eventKey}>
