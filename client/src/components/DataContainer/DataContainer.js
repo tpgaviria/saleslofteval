@@ -26,7 +26,7 @@ class DataContainer extends Component {
     render() {
         return (
             <Container>
-                       <Row>
+                       <Row className='data-headers'>
                         <Col>Name</Col>
                         <Col>Title</Col>
                         <Col>Email</Col>

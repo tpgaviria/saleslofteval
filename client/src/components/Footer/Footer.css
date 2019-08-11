@@ -1,0 +1,14 @@
+.footer {
+    margin: 2% 0%;
+    font-size: .8em;
+    text-align: center;
+    color: white;
+}
+
+#logo {
+    height: 1.2em;
+}
+
+.footer a {
+    color: rgb(182, 227, 255);
+}
