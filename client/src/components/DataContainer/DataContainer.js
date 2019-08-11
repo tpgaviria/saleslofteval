@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import PersonData from '../PersonData/PersonData';
 import API from '../../utilities/API.js';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class DataContainer extends Component {
     state = {
@@ -21,12 +24,15 @@ class DataContainer extends Component {
     }
 
     render() {
-        console.log(this.state.peopleData);
         return (
-            <div>
+            <Container>
+                       <Row>
+                        <Col>Name</Col>
+                        <Col>Title</Col>
+                        <Col>Email</Col>
+                    </Row>
                 {this.state.peopleData &&
                     (<Accordion>
-
                         {this.state.peopleData.map((person, i) => (
                             <PersonData
                                 firstname={person.first_name}
@@ -40,7 +46,7 @@ class DataContainer extends Component {
 
                     </Accordion>)
                 }
-            </div>
+            </Container>
         );
     }
 }

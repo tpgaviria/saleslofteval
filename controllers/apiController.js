@@ -7,6 +7,6 @@ module.exports = {
         axios.get(`https://api.salesloft.com/v2/people.json`,
             { headers: { 'Authorization': 'Bearer ' + KEY } })
             .then(results => res.json(results.data))
-            .catch(err => console.log('ERRORRRRRRRRRR: ' + err));
+            .catch(err => console.log('Error retrieving people data: ' + err));
     }
 }
