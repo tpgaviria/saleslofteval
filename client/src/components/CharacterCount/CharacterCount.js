@@ -21,7 +21,7 @@ class CharacterCount extends Component {
 
     render() {
         return (
-            <Container>
+            <div>
                 <sub>Unique characters found in email address, sorted by frequency</sub>
                 <Table bordered size='sm'>
                     <tbody>
@@ -39,7 +39,7 @@ class CharacterCount extends Component {
                         </tr>
                     </tbody>
                 </Table>
-            </Container>
+            </div>
         );
     }
 }
