@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Table from 'react-bootstrap/Table'
+import Container from 'react-bootstrap/Container';
 
 class CharacterCount extends Component {
     state = {
@@ -20,9 +21,9 @@ class CharacterCount extends Component {
 
     render() {
         return (
-            <div>
-                <sub>Unique characters in email, sorted by frequency</sub>
-                <Table bordered>
+            <Container>
+                <sub>Unique characters found in email address, sorted by frequency</sub>
+                <Table bordered size='sm'>
                     <tbody>
                         <tr>
                             <th>Character:</th>
@@ -38,7 +39,7 @@ class CharacterCount extends Component {
                         </tr>
                     </tbody>
                 </Table>
-            </div>
+            </Container>
         );
     }
 }
