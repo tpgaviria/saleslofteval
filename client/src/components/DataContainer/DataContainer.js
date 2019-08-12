@@ -27,6 +27,7 @@ class DataContainer extends Component {
                 this.getTotalCount(emailData);
                 this.setState({ peopleData: res.data.data })
             })
+
     }
 
     getTotalCount(data) {
@@ -37,25 +38,12 @@ class DataContainer extends Component {
             if (freq[character]) {
                 freq[character]++;
             } else {
-                freq[character] = 1;
+                freq[character] = 1; 
             }
         }
-        // this.sortCharCount(freq);
         this.props.charCount(freq);
     }
     
-    sortCharCount(count) {
-        let characterObj = count;
-        let charArray = [];
-        for (let key in characterObj) {
-            charArray.push([key, characterObj[key]]);
-        }
-        charArray.sort((a,b) => {
-            return b[1] - a[1];
-        })
-        return charArray;
-    }
-
     componentDidMount() {
         this.getData();
     }
