@@ -7,6 +7,10 @@ import Col from 'react-bootstrap/Col';
 
 class PersonData extends React.Component {
 
+    data = {
+        totalCount: {}
+    }
+
     getCharacterCount(string) {
         let freq = {};
         for (let i = 0; i < string.length; i++) {

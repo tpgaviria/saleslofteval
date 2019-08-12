@@ -8,15 +8,52 @@ import Col from 'react-bootstrap/Col';
 
 class DataContainer extends Component {
     state = {
-        info: 'worked? nice',
         peopleData: null
+    }
+
+    data = {
+        emails: null,
+        charCount: null
     }
 
     getData = () => {
         API.getData()
             .then(res => {
+                let emailData = [];
+                for (let i = 0; i < res.data.data.length; i++) {
+                    emailData.push(res.data.data[i].email_address)
+                }
+                this.data.emails = emailData;
+                this.getTotalCount(emailData);
                 this.setState({ peopleData: res.data.data })
             })
+    }
+
+    getTotalCount(data) {
+        let freq = {};
+        data = data.join('');
+        for (let i = 0; i < data.length; i++) {
+            let character = data.charAt(i);
+            if (freq[character]) {
+                freq[character]++;
+            } else {
+                freq[character] = 1;
+            }
+        }
+        // this.sortCharCount(freq);
+        this.props.charCount(freq);
+    }
+    
+    sortCharCount(count) {
+        let characterObj = count;
+        let charArray = [];
+        for (let key in characterObj) {
+            charArray.push([key, characterObj[key]]);
+        }
+        charArray.sort((a,b) => {
+            return b[1] - a[1];
+        })
+        return charArray;
     }
 
     componentDidMount() {

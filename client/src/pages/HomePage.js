@@ -6,11 +6,21 @@ import Footer from '../components/Footer/Footer';
 
 class HomePage extends Component {
 
+    state = {
+        charCount: null
+    }
+
+    handleCharCount(charCount) {
+        this.setState({
+            charCount: charCount
+        })
+    }
+
     render() {
         return (
             <div>
-                <Header />
-                <DataContainer />
+                {this.state.charCount && (<Header charCount={this.state.charCount}/>)}
+                <DataContainer charCount={this.handleCharCount.bind(this)}/>
                 <Footer />
             </div>
         );
