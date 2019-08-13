@@ -6,7 +6,7 @@ Character counts are provided for each unique character in all email addresses c
 
 ## Deployed Site
 
-This application was deployed using Heroku. [Visit the site here.](https://salesloftapi.herokuapp.com)
+This application was deployed using Heroku, and is mobile responsive. [Visit the site here.](https://salesloftapi.herokuapp.com)
 
 ## Technologies Used
 * React as Front-End Client
