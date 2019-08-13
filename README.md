@@ -32,3 +32,10 @@ This application was deployed using Heroku. [Visit the site here.](https://sales
 6. On row click, accordion toggles and displays child component, CharacterCount, where data is sorted and displayed as table.
 7. HomePage sends total character count data to child component, Header.
 8. Total combined character count data is sent to Header's child component, CharCountModal, where data is sorted and displayed as table inside a modal.
+
+
+#### Database Design Portion
+![Image of Database Design](https://github.com/tpgaviria/saleslofteval/blob/master/SLDatabaseDesign.png)
+
+#### SQL Hunt Portion
+ sqlhunt.sql file can be run in PostgreSQL database to run queries. [SQL file here.](https://github.com/tpgaviria/saleslofteval/blob/master/sqlhunt.sql)
